@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int T;
+    char s[1001];
+    scanf("%d",&T);
+    for(int i=1;i<=T;i++)
+    {
+        scanf(" %[^\n]",s);
+
+        int k=0;
+        for( int j =0 ;j<strlen(s);j++)
+        {
+                if(s[j] == 'a' ||  s[j] == 'e' || s[j] == 'i' || s[j] == 'o' || s[j] == 'u' ||  s[j] == 'A' || s[j] == 'E' || s[j] == 'I' || s[j] == 'O' || s[j] == 'U' )
+                {
+                    k++;
+
+                }
+
+        }
+        printf("Number of vowels = %d\n",k);
+
+    }
+
+    return 0;
+
+}
