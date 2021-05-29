@@ -1,0 +1,50 @@
+#include <stdio.h>
+ #include <string.h>
+ int main()
+ {
+     int T,i,k,l;
+     char s[101],v[101],c[101];
+     scanf("%d",&T);
+
+     for(i = 0 ; i < T; i++){
+        scanf(" %[^\n]",s);
+        k=0;
+        l=0;
+
+        for(int x = 0;x<101;x++){
+            v[x]='\0';
+            c[x] = '\0';
+        }
+
+
+        for( int j = 0;j<strlen(s); j++)
+        {
+          // v[j]='\0' && c[j]='\0';
+          if((s[j] >= 'a' && s[j] <= 'z') || (s[j] >= 'A' && s[j] <= 'Z'))
+          {
+           //       if(s[j] == '\0') break;
+                if(s[j] == 'a' ||  s[j] == 'e' || s[j] == 'i' || s[j] == 'o' || s[j] == 'u'  ||  s[j] == 'A' || s[j] == 'E' || s[j] == 'I' || s[j] == 'O' || s[j] == 'U')
+                {
+
+
+                    v[k]=s[j];
+                    k++;
+
+                }
+                else {   //if(s[j] != ' ')
+
+                c[l] = s[j];
+                l++;
+             }
+
+          }
+
+
+
+        }
+        printf("%s\n",v);
+        printf("%s\n",c);
+
+     }
+
+}
