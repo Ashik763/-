@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int N,T,i,j,root;
+
+    scanf("%d",&T);
+    while(T--){
+        scanf("%d",&N);
+        for(j=2;j<=N;j++)
+        {
+
+            int a=0,b=0;
+            root = sqrt(j);
+            for(i=2;i<=root;i++)
+            {
+                if(j%i == 0)
+                {
+                b=j/i;
+                a=a+i+b;
+                }
+
+            }
+            if(a+1 == j){
+                printf("%d\n",j);
+            }
+
+
+        }
+
+
+    }
+
+    return 0;
+}
